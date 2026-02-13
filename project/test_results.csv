@@ -1,0 +1,401 @@
+request_id,request_date,cash_balance,inventory_value,response
+1,2025-04-01,45121.2,4875.3,"Dear Customer,
+
+Thank you for your inquiry! We are pleased to provide the following quote for your paper supply needs.
+
+
+--- Quote Details ---
+  Glossy paper: 200 units @ $0.20/unit (5% bulk discount applied) = $38.00
+  Cardstock: 100 units @ $0.15/unit (5% bulk discount applied) = $14.00
+  Colored paper: 100 units @ $0.10/unit (5% bulk discount applied) = $9.50
+
+  GRAND TOTAL: $62.00
+
+Bulk pricing has been applied to qualifying items to provide you with the best value on your order.
+
+Estimated delivery: 2025-04-05
+
+Thank you for choosing Beaver's Choice Paper Company!"
+2,2025-04-03,45121.2,4875.3,"Dear Customer,
+
+Thank you for your inquiry. Unfortunately, we are unable to fulfill your request at this time.
+
+Item Status:
+  - colorful poster paper: currently out of stock
+  - streamers: currently out of stock
+  - balloons: not in our product catalog
+
+We apologize for the inconvenience and recommend checking back soon as our inventory is regularly restocked.
+
+Best regards,
+Beaver's Choice Paper Company"
+3,2025-04-04,45113.95,4881.95,"Dear Customer,
+
+Thank you for your inquiry! We are pleased to provide the following quote for your paper supply needs.
+
+
+--- Quote Details ---
+  A4 paper: 272 units @ $0.05/unit (5% bulk discount applied) = $13.00 [Note: 10000 units requested, only 272 currently available]
+
+  GRAND TOTAL: $13.00
+
+Bulk pricing has been applied to qualifying items to provide you with the best value on your order.
+
+--- Unavailable Items ---
+  - A3 paper: currently out of stock
+  - printer paper: currently out of stock
+
+We apologize for any inconvenience regarding unavailable items.
+
+Some items were partially fulfilled due to limited stock. The quantities above reflect what we can currently supply.
+
+Estimated delivery: 2025-04-08
+
+Thank you for choosing Beaver's Choice Paper Company!"
+4,2025-04-05,45118.35,4874.299999999999,"Dear Customer,
+
+Thank you for your inquiry! We are pleased to provide the following quote for your paper supply needs.
+
+
+--- Quote Details ---
+  Cardstock: 495 units @ $0.15/unit (5% bulk discount applied) = $71.00 [Note: 500 units requested, only 495 currently available]
+
+  GRAND TOTAL: $71.00
+
+Bulk pricing has been applied to qualifying items to provide you with the best value on your order.
+
+Some items were partially fulfilled due to limited stock. The quantities above reflect what we can currently supply.
+
+Estimated delivery: 2025-04-09
+
+Thank you for choosing Beaver's Choice Paper Company!"
+5,2025-04-05,45139.75,4845.9,"Dear Customer,
+
+Thank you for your inquiry! We are pleased to provide the following quote for your paper supply needs.
+
+
+--- Quote Details ---
+  Colored paper: 500 units @ $0.10/unit (10% bulk discount applied) = $45.00
+  Cardstock: 300 units @ $0.15/unit (5% bulk discount applied) = $43.00
+
+  GRAND TOTAL: $88.00
+
+Bulk pricing has been applied to qualifying items to provide you with the best value on your order.
+
+--- Unavailable Items ---
+  - decorative washi tape: currently out of stock
+
+We apologize for any inconvenience regarding unavailable items.
+
+Estimated delivery: 2025-04-09
+
+Thank you for choosing Beaver's Choice Paper Company!"
+6,2025-04-06,45167.75,4815.9,"Dear Customer,
+
+Thank you for your inquiry! We are pleased to provide the following quote for your paper supply needs.
+
+
+--- Quote Details ---
+  Cardstock: 200 units @ $0.15/unit (5% bulk discount applied) = $28.00
+
+  GRAND TOTAL: $28.00
+
+Bulk pricing has been applied to qualifying items to provide you with the best value on your order.
+
+--- Unavailable Items ---
+  - colorful construction paper: currently out of stock
+  - white printer paper: currently out of stock
+
+We apologize for any inconvenience regarding unavailable items.
+
+Estimated delivery: 2025-04-10
+
+Thank you for choosing Beaver's Choice Paper Company!"
+7,2025-04-07,45479.5,4485.9,"Dear Customer,
+
+Thank you for your inquiry! We are pleased to provide the following quote for your paper supply needs.
+
+
+--- Quote Details ---
+  Large poster paper (24x36 inches): 300 units @ $1.00/unit (5% bulk discount applied) = $285.00
+  Cardstock: 200 units @ $0.15/unit (5% bulk discount applied) = $28.00
+  A4 paper: 405 units @ $0.05/unit (5% bulk discount applied) = $19.00 [Note: 500 units requested, only 405 currently available]
+
+  GRAND TOTAL: $330.00
+
+Bulk pricing has been applied to qualifying items to provide you with the best value on your order.
+
+--- Unavailable Items ---
+  - matte A3 paper: currently out of stock
+
+We apologize for any inconvenience regarding unavailable items.
+
+Some items were partially fulfilled due to limited stock. The quantities above reflect what we can currently supply.
+
+Estimated delivery: 2025-04-11
+
+Thank you for choosing Beaver's Choice Paper Company!"
+8,2025-04-07,45440.4,4520.8,"Dear Customer,
+
+Thank you for your inquiry! We are pleased to provide the following quote for your paper supply needs.
+
+
+--- Quote Details ---
+  Glossy paper: 387 units @ $0.20/unit (5% bulk discount applied) = $74.00 [Note: 500 units requested, only 387 currently available]
+  Colored paper: 188 units @ $0.10/unit (5% bulk discount applied) = $18.00 [Note: 2000 units requested, only 188 currently available]
+
+  GRAND TOTAL: $92.00
+
+Bulk pricing has been applied to qualifying items to provide you with the best value on your order.
+
+--- Unavailable Items ---
+  - A4 matte paper: currently out of stock
+  - A4 recycled paper: currently out of stock
+
+We apologize for any inconvenience regarding unavailable items.
+
+Some items were partially fulfilled due to limited stock. The quantities above reflect what we can currently supply.
+
+Estimated delivery: 2025-04-11
+
+Thank you for choosing Beaver's Choice Paper Company!"
+9,2025-04-07,45464.4,4495.8,"Dear Customer,
+
+Thank you for your inquiry! We are pleased to provide the following quote for your paper supply needs.
+
+
+--- Quote Details ---
+  Glossy paper: 100 units @ $0.20/unit (5% bulk discount applied) = $19.00
+  Kraft paper: 50 units @ $0.10/unit = $5.00
+
+  GRAND TOTAL: $24.00
+
+Bulk pricing has been applied to qualifying items to provide you with the best value on your order.
+
+--- Unavailable Items ---
+  - A4 white printer paper: currently out of stock
+
+We apologize for any inconvenience regarding unavailable items.
+
+Estimated delivery: 2025-04-11
+
+Thank you for choosing Beaver's Choice Paper Company!"
+10,2025-04-08,45464.4,4495.8,"Dear Customer,
+
+Thank you for your inquiry. Unfortunately, we are unable to fulfill your request at this time.
+
+Item Status:
+  - A4 printing paper and 200 sheets of cardstock: currently out of stock
+
+We apologize for the inconvenience and recommend checking back soon as our inventory is regularly restocked.
+
+Best regards,
+Beaver's Choice Paper Company"
+11,2025-04-08,45451.8,4506.0,"Dear Customer,
+
+Thank you for your inquiry! We are pleased to provide the following quote for your paper supply needs.
+
+
+--- Quote Details ---
+  Cardstock: 188 units @ $0.15/unit (5% bulk discount applied) = $27.00 [Note: 200 units requested, only 188 currently available]
+
+  GRAND TOTAL: $27.00
+
+Bulk pricing has been applied to qualifying items to provide you with the best value on your order.
+
+--- Unavailable Items ---
+  - standard printer paper: currently out of stock
+  - paper napkins: currently out of stock
+
+We apologize for any inconvenience regarding unavailable items.
+
+Some items were partially fulfilled due to limited stock. The quantities above reflect what we can currently supply.
+
+Estimated delivery: 2025-04-12
+
+Thank you for choosing Beaver's Choice Paper Company!"
+12,2025-04-08,45421.2,4534.2,"Dear Customer,
+
+Thank you for your inquiry! We are pleased to provide the following quote for your paper supply needs.
+
+
+--- Quote Details ---
+  Cardstock: 256 units @ $0.15/unit (5% bulk discount applied) = $36.00 [Note: 500 units requested, only 256 currently available]
+
+  GRAND TOTAL: $36.00
+
+Bulk pricing has been applied to qualifying items to provide you with the best value on your order.
+
+Some items were partially fulfilled due to limited stock. The quantities above reflect what we can currently supply.
+
+Estimated delivery: 2025-04-12
+
+Thank you for choosing Beaver's Choice Paper Company!"
+13,2025-04-08,45398.0,4554.2,"Dear Customer,
+
+Thank you for your inquiry! We are pleased to provide the following quote for your paper supply needs.
+
+
+--- Quote Details ---
+  Glossy paper: 341 units @ $0.20/unit (5% bulk discount applied) = $65.00 [Note: 500 units requested, only 341 currently available]
+
+  GRAND TOTAL: $65.00
+
+Bulk pricing has been applied to qualifying items to provide you with the best value on your order.
+
+Some items were partially fulfilled due to limited stock. The quantities above reflect what we can currently supply.
+
+Estimated delivery: 2025-04-12
+
+Thank you for choosing Beaver's Choice Paper Company!"
+14,2025-04-09,45393.15,4554.2,"Dear Customer,
+
+Thank you for your inquiry! We are pleased to provide the following quote for your paper supply needs.
+
+
+--- Quote Details ---
+  A4 paper: 405 units @ $0.05/unit (5% bulk discount applied) = $19.00 [Note: 5000 units requested, only 405 currently available]
+  Cardstock: 444 units @ $0.15/unit (5% bulk discount applied) = $63.00 [Note: 500 units requested, only 444 currently available]
+
+  GRAND TOTAL: $82.00
+
+Bulk pricing has been applied to qualifying items to provide you with the best value on your order.
+
+--- Unavailable Items ---
+  - poster paper in various colors: currently out of stock
+
+We apologize for any inconvenience regarding unavailable items.
+
+Some items were partially fulfilled due to limited stock. The quantities above reflect what we can currently supply.
+
+Estimated delivery: 2025-04-13
+
+Thank you for choosing Beaver's Choice Paper Company!"
+15,2025-04-12,45390.0,4554.2,"Dear Customer,
+
+Thank you for your inquiry! We are pleased to provide the following quote for your paper supply needs.
+
+
+--- Quote Details ---
+  A4 paper: 405 units @ $0.05/unit (5% bulk discount applied) = $19.00 [Note: 10000 units requested, only 405 currently available]
+  Colored paper: 429 units @ $0.10/unit (5% bulk discount applied) = $41.00 [Note: 5000 units requested, only 429 currently available]
+
+  GRAND TOTAL: $60.00
+
+Bulk pricing has been applied to qualifying items to provide you with the best value on your order.
+
+--- Unavailable Items ---
+  - cardboard for signage: not in our product catalog
+
+We apologize for any inconvenience regarding unavailable items.
+
+Some items were partially fulfilled due to limited stock. The quantities above reflect what we can currently supply.
+
+Estimated delivery: 2025-04-16
+
+Thank you for choosing Beaver's Choice Paper Company!"
+16,2025-04-13,45485.0,4454.2,"Dear Customer,
+
+Thank you for your inquiry! We are pleased to provide the following quote for your paper supply needs.
+
+
+--- Quote Details ---
+  Large poster paper (24x36 inches): 100 units @ $1.00/unit (5% bulk discount applied) = $95.00
+
+  GRAND TOTAL: $95.00
+
+Bulk pricing has been applied to qualifying items to provide you with the best value on your order.
+
+--- Unavailable Items ---
+  - A4 printer paper: currently out of stock
+  - colorful construction paper: currently out of stock
+
+We apologize for any inconvenience regarding unavailable items.
+
+Estimated delivery: 2025-04-14
+
+Thank you for choosing Beaver's Choice Paper Company!"
+17,2025-04-14,45528.1,4404.2,"Dear Customer,
+
+Thank you for your inquiry! We are pleased to provide the following quote for your paper supply needs.
+
+
+--- Quote Details ---
+  Paper plates: 500 units @ $0.10/unit (10% bulk discount applied) = $45.00
+  Colored paper: 429 units @ $0.10/unit (5% bulk discount applied) = $41.00 [Note: 500 units requested, only 429 currently available]
+
+  GRAND TOTAL: $86.00
+
+Bulk pricing has been applied to qualifying items to provide you with the best value on your order.
+
+--- Unavailable Items ---
+  - A4 white printer paper: currently out of stock
+  - table napkins: currently out of stock
+  - paper cups: currently out of stock
+
+We apologize for any inconvenience regarding unavailable items.
+
+Some items were partially fulfilled due to limited stock. The quantities above reflect what we can currently supply.
+
+Estimated delivery: 2025-04-18
+
+Thank you for choosing Beaver's Choice Paper Company!"
+18,2025-04-14,45543.5,4384.2,"Dear Customer,
+
+Thank you for your inquiry! We are pleased to provide the following quote for your paper supply needs.
+
+
+--- Quote Details ---
+  Colored paper: 200 units @ $0.10/unit (5% bulk discount applied) = $19.00
+  Cardstock: 444 units @ $0.15/unit (5% bulk discount applied) = $63.00 [Note: 500 units requested, only 444 currently available]
+
+  GRAND TOTAL: $82.00
+
+Bulk pricing has been applied to qualifying items to provide you with the best value on your order.
+
+--- Unavailable Items ---
+  - standard printing paper: currently out of stock
+
+We apologize for any inconvenience regarding unavailable items.
+
+Some items were partially fulfilled due to limited stock. The quantities above reflect what we can currently supply.
+
+Estimated delivery: 2025-04-18
+
+Thank you for choosing Beaver's Choice Paper Company!"
+19,2025-04-15,45535.7,4384.2,"Dear Customer,
+
+Thank you for your inquiry! We are pleased to provide the following quote for your paper supply needs.
+
+
+--- Quote Details ---
+  Glossy paper: 441 units @ $0.20/unit (5% bulk discount applied) = $84.00 [Note: 2000 units requested, only 441 currently available]
+  Cardstock: 444 units @ $0.15/unit (5% bulk discount applied) = $63.00 [Note: 1000 units requested, only 444 currently available]
+
+  GRAND TOTAL: $145.00
+
+Bulk pricing has been applied to qualifying items to provide you with the best value on your order.
+
+--- Unavailable Items ---
+  - A3 matte paper: currently out of stock
+
+We apologize for any inconvenience regarding unavailable items.
+
+Some items were partially fulfilled due to limited stock. The quantities above reflect what we can currently supply.
+
+Estimated delivery: 2025-04-19
+
+Thank you for choosing Beaver's Choice Paper Company!"
+20,2025-04-17,45535.7,4384.2,"Dear Customer,
+
+Thank you for your inquiry. Unfortunately, we are unable to fulfill your request at this time.
+
+Item Status:
+  - flyers: currently out of stock
+  - posters: not in our product catalog
+  - tickets: not in our product catalog
+
+We apologize for the inconvenience and recommend checking back soon as our inventory is regularly restocked.
+
+Best regards,
+Beaver's Choice Paper Company"

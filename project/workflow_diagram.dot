@@ -1,0 +1,144 @@
+digraph G {
+    rankdir=TB;
+    fontname="Helvetica Neue";
+    nodesep=0.6;
+    ranksep=0.45;
+    newrank=true;
+
+    node [fontname="Helvetica Neue", fontsize=9, style="filled,rounded",
+          shape=box, penwidth=1.3, margin="0.15,0.08"];
+    edge [fontname="Helvetica Neue", fontsize=8, penwidth=1.3];
+
+    // ===== INPUT =====
+    CR [label="Customer Request\n(quote_requests_sample.csv)",
+        fillcolor="#BBDEFB", color="#1976D2", fontsize=10, penwidth=2];
+
+    // ===== ORCHESTRATOR STEPS (left column) =====
+    subgraph cluster_O {
+        label=<<B>Orchestrator</B> — PaperCompanyOrchestrator (Python Class)>;
+        fontsize=11; fontcolor="#E65100";
+        style="filled,bold,rounded"; fillcolor="#FFF8E1"; color="#FB8C00"; penwidth=2.5;
+
+        O1 [label="1. Parse Items & Quantities", fillcolor="#FFE0B2", color="#EF6C00"];
+        O2 [label="2. Match to Catalog (deterministic)", fillcolor="#FFE0B2", color="#EF6C00"];
+        O3 [label="3. Verify Stock", fillcolor="#FFE0B2", color="#EF6C00"];
+        O4 [label="Items\nAvailable?", shape=diamond, fillcolor="#FFF3E0", color="#EF6C00",
+            width=1.1, height=0.7];
+        O5 [label="4. Classify Items", fillcolor="#FFE0B2", color="#EF6C00"];
+        O6 [label="5. Calculate Quote +\nHistorical Search", fillcolor="#FFE0B2", color="#EF6C00"];
+        O7 [label="6. Record Sales", fillcolor="#FFE0B2", color="#EF6C00"];
+        O8 [label="7. Evaluate Reorders", fillcolor="#FFE0B2", color="#EF6C00"];
+        O9 [label="8. Compose Response", fillcolor="#FFE0B2", color="#EF6C00"];
+        O10 [label="9. Customer Evaluation", fillcolor="#FFE0B2", color="#EF6C00"];
+
+        O1 -> O2 -> O3 -> O4 [color="#E65100", penwidth=1.5];
+        O4 -> O5 [label=<<FONT COLOR="#2E7D32"><B> Yes </B></FONT>>, color="#2E7D32", penwidth=1.8];
+        O4 -> O9 [label=<<FONT COLOR="#C62828"><B> No </B></FONT>>, color="#C62828", penwidth=1.8];
+        O5 -> O6 -> O7 -> O8 -> O9 -> O10 [color="#E65100", penwidth=1.5];
+    }
+
+    // ===== AGENT NODES (right column, aligned with calling steps) =====
+    INV [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="1">
+        <TR><TD><B><FONT POINT-SIZE="10">Inventory Agent</FONT></B></TD></TR>
+        <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">- match_item_tool</FONT></TD></TR>
+        <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">- check_inventory_tool → get_all_inventory()</FONT></TD></TR>
+        <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">- check_stock_tool → get_stock_level()</FONT></TD></TR>
+        </TABLE>>,
+        fillcolor="#C8E6C9", color="#388E3C", penwidth=2];
+
+    QUO [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="1">
+        <TR><TD><B><FONT POINT-SIZE="10">Quote Agent</FONT></B></TD></TR>
+        <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">- calculate_quote_tool</FONT></TD></TR>
+        <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">- search_quotes_tool → search_quote_history()</FONT></TD></TR>
+        </TABLE>>,
+        fillcolor="#E1BEE7", color="#7B1FA2", penwidth=2];
+
+    SAL [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="1">
+        <TR><TD><B><FONT POINT-SIZE="10">Sales Agent</FONT></B></TD></TR>
+        <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">- finalize_sale_tool → create_transaction(sales)</FONT></TD></TR>
+        <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">- reorder_stock_tool → create_transaction(stock_orders)</FONT></TD></TR>
+        <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">- check_delivery_tool → get_supplier_delivery_date()</FONT></TD></TR>
+        <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">- check_balance_tool → get_cash_balance()</FONT></TD></TR>
+        </TABLE>>,
+        fillcolor="#FFCCBC", color="#E64A19", penwidth=2];
+
+    CUS [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="1">
+        <TR><TD><B><FONT POINT-SIZE="10">Customer Agent</FONT></B> (external)</TD></TR>
+        <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">- Simulates customer receiving quote</FONT></TD></TR>
+        <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">- Evaluates pricing, availability, delivery</FONT></TD></TR>
+        <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">- Provides feedback / negotiation signals</FONT></TD></TR>
+        </TABLE>>,
+        fillcolor="#FFF9C4", color="#F9A825", penwidth=2];
+
+    ADV [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="1">
+        <TR><TD><B><FONT POINT-SIZE="10">Business Advisor Agent</FONT></B></TD></TR>
+        <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">- financial_report_tool → generate_financial_report()</FONT></TD></TR>
+        <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">- check_balance_tool → get_cash_balance()</FONT></TD></TR>
+        <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">- Proactive mid-session analysis (every 5 requests)</FONT></TD></TR>
+        </TABLE>>,
+        fillcolor="#B2DFDB", color="#00796B", penwidth=2];
+
+    // ===== DATABASE =====
+    DB [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="1">
+        <TR><TD><B><FONT POINT-SIZE="10">SQLite Database</FONT></B> (munder_difflin.db)</TD></TR>
+        <TR><TD><FONT POINT-SIZE="8">transactions | inventory | quotes | quote_requests</FONT></TD></TR>
+        </TABLE>>,
+        shape=cylinder, fillcolor="#CFD8DC", color="#546E7A", penwidth=2,
+        width=4, height=0.7];
+
+    // ===== OUTPUT =====
+    OUT [label="Customer Response + test_results.csv",
+         fillcolor="#BBDEFB", color="#1976D2", fontsize=10, penwidth=2];
+
+    PB [label="Post-Batch: Financial Assessment\n(after all 20 requests)",
+        fillcolor="#DCEDC8", color="#689F38", penwidth=1.5, fontsize=9,
+        style="filled,rounded,dashed"];
+
+    MID [label="Mid-Session: Proactive Advice\n(every 5 requests)",
+         fillcolor="#DCEDC8", color="#689F38", penwidth=1.5, fontsize=9,
+         style="filled,rounded,dashed"];
+
+    // ===== RANK ALIGNMENT (step <-> agent on same row) =====
+    {rank=same; O3; INV}
+    {rank=same; O6; QUO}
+    {rank=same; O7; SAL}
+    {rank=same; O10; CUS}
+    {rank=same; PB; ADV}
+
+    // ===== EDGES =====
+
+    // Input
+    CR -> O1 [color="#1976D2", penwidth=2];
+
+    // Orchestrator → Agents (dashed, color-coded, left-to-right)
+    O3 -> INV [style=dashed, color="#388E3C", penwidth=2,
+               label=<<I><FONT COLOR="#2E7D32"> verify stock </FONT></I>>];
+    O6 -> QUO [style=dashed, color="#7B1FA2", penwidth=2,
+               label=<<I><FONT COLOR="#6A1B9A"> search history </FONT></I>>];
+    O7 -> SAL [style=dashed, color="#E64A19", penwidth=2,
+               label=<<I><FONT COLOR="#BF360C"> finalize sales </FONT></I>>];
+    O8 -> SAL [style=dashed, color="#E64A19", penwidth=2,
+               label=<<I><FONT COLOR="#BF360C"> reorder stock </FONT></I>>];
+    O10 -> CUS [style=dashed, color="#F9A825", penwidth=2,
+                label=<<I><FONT COLOR="#F57F17"> evaluate quote </FONT></I>>];
+
+    // Post-batch → Advisor
+    PB -> ADV [style=dashed, color="#00796B", penwidth=2,
+               label=<<I><FONT COLOR="#004D40"> final assessment </FONT></I>>];
+
+    // Mid-session → Advisor
+    MID -> ADV [style=dashed, color="#00796B", penwidth=2,
+                label=<<I><FONT COLOR="#004D40"> proactive advice </FONT></I>>];
+
+    // Output
+    O10 -> OUT [color="#1976D2", penwidth=2];
+    OUT -> MID [style=dotted, color="#689F38", penwidth=1.5,
+                label=<<I><FONT COLOR="#689F38"> every 5th request </FONT></I>>];
+    OUT -> PB [style=dotted, color="#689F38", penwidth=1.5];
+
+    // Agents → Database
+    INV -> DB [color="#66BB6A", penwidth=1.2];
+    QUO -> DB [color="#AB47BC", penwidth=1.2];
+    SAL -> DB [color="#FF7043", penwidth=1.2];
+    ADV -> DB [color="#26A69A", penwidth=1.2];
+}
