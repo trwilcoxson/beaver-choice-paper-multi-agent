@@ -80,7 +80,7 @@ digraph G {
 
     // ===== DATABASE =====
     DB [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="1">
-        <TR><TD><B><FONT POINT-SIZE="10">SQLite Database</FONT></B> (munder_difflin.db)</TD></TR>
+        <TR><TD><B><FONT POINT-SIZE="10">SQLite Database</FONT></B> (paper_supply.db)</TD></TR>
         <TR><TD><FONT POINT-SIZE="8">transactions | inventory | quotes | quote_requests</FONT></TD></TR>
         </TABLE>>,
         shape=cylinder, fillcolor="#CFD8DC", color="#546E7A", penwidth=2,

@@ -1,4 +1,4 @@
-# Beaver's Choice Paper Company — Multi-Agent System Reflection Report
+# Multi-Agent Supply Chain System — Reflection Report
 
 ## 1. System Architecture and Agent Workflow
 

@@ -10,7 +10,7 @@ from typing import Dict, List, Union
 from sqlalchemy import create_engine, Engine
 
 # Create an SQLite database
-db_engine = create_engine("sqlite:///munder_difflin.db")
+db_engine = create_engine("sqlite:///paper_supply.db")
 
 # List containing the different kinds of papers 
 paper_supplies = [
@@ -128,7 +128,7 @@ def generate_sample_inventory(paper_supplies: list, coverage: float = 0.4, seed:
 
 def init_database(db_engine: Engine, seed: int = 137) -> Engine:    
     """
-    Set up the Munder Difflin database with all required tables and initial records.
+    Set up the paper supply database with all required tables and initial records.
 
     This function performs the following tasks:
     - Creates the 'transactions' table for logging stock orders and sales
@@ -1164,7 +1164,7 @@ inventory_agent = ToolCallingAgent(
     name="inventory_agent",
     verbosity_level=LogLevel.OFF,
     description=(
-        "You are the Inventory Specialist for Beaver's Choice Paper Company. "
+        "You are the Inventory Specialist for Pacific Paper Supply. "
         "Your responsibilities: "
         "1) Match customer-requested items to exact catalog names using match_item_tool. "
         "2) Check current stock levels using check_stock_tool. "
@@ -1181,7 +1181,7 @@ quote_agent = ToolCallingAgent(
     name="quote_agent",
     verbosity_level=LogLevel.OFF,
     description=(
-        "You are the Pricing Specialist for Beaver's Choice Paper Company. "
+        "You are the Pricing Specialist for Pacific Paper Supply. "
         "Your responsibilities: "
         "1) Generate price quotes using calculate_quote_tool for each line item. "
         "2) Reference historical quotes using search_quotes_tool for consistency. "
@@ -1198,7 +1198,7 @@ sales_agent = ToolCallingAgent(
     name="sales_agent",
     verbosity_level=LogLevel.OFF,
     description=(
-        "You are the Sales Manager for Beaver's Choice Paper Company. "
+        "You are the Sales Manager for Pacific Paper Supply. "
         "Your responsibilities: "
         "1) Finalize sales using finalize_sale_tool to record each transaction. "
         "2) Check delivery timelines using check_delivery_tool. "
@@ -1215,7 +1215,7 @@ advisor_agent = ToolCallingAgent(
     name="advisor_agent",
     verbosity_level=LogLevel.OFF,
     description=(
-        "You are the Business Advisor for Beaver's Choice Paper Company. "
+        "You are the Business Advisor for Pacific Paper Supply. "
         "Your responsibilities: "
         "1) Generate financial reports using financial_report_tool to assess "
         "overall business health. "
@@ -1243,8 +1243,8 @@ customer_agent = ToolCallingAgent(
     name="customer_agent",
     verbosity_level=LogLevel.OFF,
     description=(
-        "You are a customer evaluating a quote from Beaver's Choice Paper "
-        "Company. Review the quote provided and respond as a realistic "
+        "You are a customer evaluating a quote from Pacific Paper Supply. "
+        "Review the quote provided and respond as a realistic "
         "customer would. Consider the pricing, availability, and delivery "
         "timeline. You may: accept the quote, request a discount if the "
         "order is large, or express concern about partial fulfillment. "
@@ -1284,7 +1284,7 @@ def get_customer_feedback(quote_response, job, event, order_size):
 # =============================================================================
 
 class PaperCompanyOrchestrator:
-    """Coordinates the multi-agent system for Beaver's Choice Paper Company.
+    """Coordinates the multi-agent system for Pacific Paper Supply.
 
     Workflow per request:
       1. Parse items and quantities from customer text
@@ -1505,7 +1505,7 @@ class PaperCompanyOrchestrator:
                 "Thank you for your inquiry. Unfortunately, we could not identify "
                 "specific items and quantities in your request. Please provide "
                 "item names and quantities, and we will be happy to assist.\n\n"
-                "Best regards,\nBeaver's Choice Paper Company"
+                "Best regards,\nPacific Paper Supply"
             )
 
         items_summary = ", ".join(
@@ -1615,7 +1615,7 @@ class PaperCompanyOrchestrator:
                 "Item Status:\n" + "\n".join(reasons) + "\n\n"
                 "We apologize for the inconvenience and recommend checking back "
                 "soon as our inventory is regularly restocked.\n\n"
-                "Best regards,\nBeaver's Choice Paper Company"
+                "Best regards,\nPacific Paper Supply"
             )
 
         # ---- Stage 2: QUOTE — pricing with bulk discounts ----
@@ -1840,7 +1840,7 @@ class PaperCompanyOrchestrator:
         # Delivery estimate
         parts.append(f"\nEstimated delivery: {delivery_date}")
         parts.append(
-            "\nThank you for choosing Beaver's Choice Paper Company!"
+            "\nThank you for choosing Pacific Paper Supply!"
         )
 
         completed_stages.add(5)
@@ -1930,7 +1930,7 @@ def run_test_scenarios():
     """
     # --- Title Banner ---
     print(f"\n  {_C['dim']}{'━' * (W - 4)}{_C['reset']}")
-    print(f"  {_C['bold']}{_C['orange']}BEAVER'S CHOICE PAPER COMPANY{_C['reset']}")
+    print(f"  {_C['bold']}{_C['orange']}PACIFIC PAPER SUPPLY{_C['reset']}")
     print(f"  {_C['dim']}Multi-Agent Inventory & Quoting System{_C['reset']}")
     print(f"  {_C['dim']}Framework: smolagents  │  Model: GPT-4o-mini{_C['reset']}")
     print(f"  {_C['dim']}Agents: Orchestrator · Inventory · Quote · Sales · Advisor{_C['reset']}")
@@ -2000,7 +2000,7 @@ def run_test_scenarios():
             response = (
                 "Dear Customer,\n\nWe apologize, but we encountered an issue "
                 "processing your request. Please try again or contact our "
-                "support team.\n\nBeaver's Choice Paper Company"
+                "support team.\n\nPacific Paper Supply"
             )
 
         # --- Customer Agent Feedback (stand-out feature) ---
